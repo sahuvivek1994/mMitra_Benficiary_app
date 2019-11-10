@@ -14,7 +14,7 @@ class Splash_scren : AppCompatActivity() {
 
         Timer().schedule(2000)
         {
-            startActivity(Intent(this@Splash_scren,MainMenu::class.java))
+            startActivity(Intent(this@Splash_scren,MainActivity::class.java))
         }
     }
 }
