@@ -1,8 +1,8 @@
 package tech.inscripts.ins_armman.mmitra_app
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -14,7 +14,7 @@ class Splash_scren : AppCompatActivity() {
 
         Timer().schedule(2000)
         {
-            startActivity(Intent(this@Splash_scren,MainActivity::class.java))
+            startActivity(Intent(this@Splash_scren, Main::class.java))
         }
     }
 }
