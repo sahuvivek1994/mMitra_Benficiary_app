@@ -10,10 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainMenu"
-            android:label="@string/title_activity_main_menu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".MainActivity" />
+            android:name=".Main"
+            android:label="@string/title_activity_main"
+            android:parentActivityName=".Splash_scren"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <activity
             android:name=".Splash_scren"
             android:label="@string/app_name"
