@@ -16,17 +16,16 @@
             android:label="@string/title_activity_main"
             android:parentActivityName=".Splash_scren"
             android:theme="@style/AppTheme.NoActionBar">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".splashscreen.SplashScreen"
             android:label="@string/app_name"
             android:theme="@style/AppFullScreenTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".login.Login"
             android:theme="@style/AppFullScreenTheme"/>
