@@ -38,6 +38,8 @@
         android:layout_gravity="bottom"
         android:background="@color/colorAccent"
         app:tabGravity="fill"
+        app:tabIndicatorHeight="2dp"
+        app:tabIndicatorColor="#ffff"
         app:tabMode="fixed" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

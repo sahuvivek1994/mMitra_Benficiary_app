@@ -13,7 +13,7 @@ public class Main extends AppCompatActivity {
 
     private int[] tabIcons = {
             R.drawable.ic_home_black,
-            R.drawable.ic_add,
+            R.drawable.ic_message,
             R.drawable.ic_account};
 
     @Override

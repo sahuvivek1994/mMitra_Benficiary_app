@@ -30,7 +30,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         switch (position) {
             case 0:
-                return PlaceholderFragment.newInstance(position + 1);
+                home home_object = new home();
+                return home_object;
+//                return PlaceholderFragment.newInstance(position + 1);
 
             case 1:
                 profile profile_object = new profile();
@@ -49,7 +51,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return "";
+        return mContext.getResources().getString(TAB_TITLES[position]);
     }
 
 
