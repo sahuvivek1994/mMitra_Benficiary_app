@@ -31,7 +31,7 @@ class LoginPresenter : ILoginPresenter<ILoginView>, ILoginInteractor.OnLoginFini
 
     override fun attachView(ilogin: ILoginView) {
         this.iLoginview = ilogin
-        var loginInter = LoginInteractor()
+        this.iLogInteractor = LoginInteractor()
 
         if (checkPermissions()) {
             initializeDBHelper()
@@ -42,7 +42,7 @@ class LoginPresenter : ILoginPresenter<ILoginView>, ILoginInteractor.OnLoginFini
     override fun initializeDBHelper() {
         var dbHelper = DBHelper(iLoginview!!.getContext())
         DatabaseManager.initializeInstance(dbHelper)
-        DatabaseManager.getInstance().openDatabase()
+//        DatabaseManager.getInstance().openDatabase()
     }
 
 
@@ -74,20 +74,18 @@ class LoginPresenter : ILoginPresenter<ILoginView>, ILoginInteractor.OnLoginFini
         )
     }
 
-    override fun validateCredentials(username: String, password: String) {
+    override fun validateCredentials(mobile: String) {
         iLoginview?.resetErrorMsg()
-        if (username.isEmpty())
-            iLoginview?.setUsernameError()
-        else if (password.isEmpty())
-            iLoginview!!.setPasswordError()
+        if (mobile.isEmpty())
+            iLoginview?.setMobileError()
         else
-            loginUser(username, password)
+            loginUser(mobile)
     }
 
-    override fun loginUser(username: String, password: String) {
+    override fun loginUser(mobile: String) {
         if (util.hasInternetConnectivity(iLoginview!!.getContext())) {
             iLoginview!!.showProgressBar()
-            createRequestBody(username, password)
+            createRequestBody(mobile)
             iLogInteractor.login(mUserDetails,this,iLoginview?.getContext()!!)
         } else {
             var title = "No internet"
@@ -96,11 +94,10 @@ class LoginPresenter : ILoginPresenter<ILoginView>, ILoginInteractor.OnLoginFini
         }
     }
 
-    override fun createRequestBody(username: String, password: String) {
+    override fun createRequestBody(mobile: String) {
             mUserDetails = UserDetails()
-            mUserDetails.setusername(username)
-            mUserDetails.setpassword(password)
-         mUserDetails.setImei(utility.getDeviceImeiNumber(iLoginview?.getContext()!!))
+            mUserDetails.setusername(mobile)
+         //mUserDetails.setImei(utility.getDeviceImeiNumber(iLoginview?.getContext()!!))
             //mUserDetails.setShowdata("true")
     }
 
@@ -112,7 +109,7 @@ class LoginPresenter : ILoginPresenter<ILoginView>, ILoginInteractor.OnLoginFini
         }
         catch(e : IllegalStateException){
             checkPermissions()
-            initializeDBHelper()
+//            initializeDBHelper()
             checkIfUserAlreadyLoggedIn()
         }
 

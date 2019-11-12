@@ -9,7 +9,6 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
@@ -46,21 +45,19 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
             setContentView(R.layout.activity_login)
             mLoginPresenter.attachView(this)
 
-        /*edittext_pass.setOnEditorActionListener(TextView.OnEditorActionListener { textView, actionId, keyEvent ->
+        edittext_mobile.setOnEditorActionListener { textView, actionId, keyEvent ->
             if (actionId == EditorInfo.IME_ACTION_DONE)
                 buttonLogin.performClick()
             false
-        })*/
+        }
 
-        buttonLogin.setOnClickListener(View.OnClickListener {
-                val username = edittext_username.text.toString()
-                val password = edittext_pass.text.toString()
-                    mLoginPresenter.validateCredentials(username, password)
-                //openHomeActivity()
-            })
+        buttonLogin.setOnClickListener {
+            //var mobileNo = edittext_mobile.text.toString()
+            var mobileNo = "7738621083"
+            mLoginPresenter.validateCredentials(mobileNo)
+        }
 
-            edittext_username.setOnClickListener(this)
-            edittext_pass.setOnClickListener(this)
+        edittext_mobile.setOnClickListener(this)
 
     }
 
@@ -73,18 +70,13 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
     }
 
 
-    override fun setUsernameError() {
-        textinputlayout_password.setErrorTextColor(ColorStateList.valueOf(Color.WHITE))
-        textinputlayout_username.error = getString(R.string.enter_username)
-    }
-
-    override fun setPasswordError() {
-        textinputlayout_password?.error= getString(R.string.enter_password)
+    override fun setMobileError() {
+        textinputlayout_mobile.setErrorTextColor(ColorStateList.valueOf(Color.WHITE))
+        textinputlayout_mobile.error = getString(R.string.enter_username)
     }
 
     override fun resetErrorMsg() {
-        textinputlayout_username?.error = null
-        textinputlayout_password?.error = null
+        textinputlayout_mobile?.error = null
     }
 
     override fun showDialog(title: String, message: String) {
@@ -117,8 +109,8 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
     }
 
     override fun setAuthenticationFailedError() {
-        edittext_pass.setText("")
-        textinputlayout_password.setError(getString(R.string.authentication_error_msg))
+        edittext_mobile.setText("")
+        textinputlayout_mobile.setError(getString(R.string.authentication_error_msg))
     }
 
     override fun getContext(): Context {
@@ -127,7 +119,7 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
 
     override fun onPostResume() {
         super.onPostResume()
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && getContext() != null) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && getContext() != null) {
             if (mLoginPresenter.checkPermissions())
                 mLoginPresenter.checkIfUserAlreadyLoggedIn()
         } else
@@ -135,8 +127,6 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
-        /*edittext_username.text?.clear()
-        edittext_pass.text?.clear()*/
 
     }
 

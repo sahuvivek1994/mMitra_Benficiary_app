@@ -4,9 +4,7 @@ import android.content.Context
 
 interface ILoginView {
 
-    fun setUsernameError()
-
-    fun setPasswordError()
+    fun setMobileError()
 
     fun resetErrorMsg()
 

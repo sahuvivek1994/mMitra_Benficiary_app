@@ -6,13 +6,13 @@
     <color name="black_overlay">#FC050505</color>
     <color name="start_color">#2DA3A3</color>
     <color name="middle_color">#173363</color>
-    <color name="end_color">#6A47A5</color>
+    <color name="end_color">#8A54E9</color>
     <color name="transperant_color">#C41E3246</color>
     <color name="white">#FFFFFF</color>
     <color name="splash_screen">#9C8F9EA0</color>
     <color name="splash_screen_label">#921339</color>
     <color name="gray">#7A7575</color>
-    <color name="login_button_bg">#CD2299A8</color>
+    <color name="login_button_bg">#960244</color>
     <!--    #CD580E25-->
     <color name="login_button_text">#720A74CE</color>
     <color name="cursor_color">#55020B</color>
@@ -41,10 +41,12 @@
     <color name="opt_bg_start">#E4F17272</color>
     <color name="opt_bg_middle">#E4D5BBBB</color>
     <color name="opt_bg_end">#FFFF</color>
-    <color name="start_color_pressed">#99582A42</color>
-    <color name="middle_color_pressed">#741863</color>
-    <color name="end_color_pressed">#716B85</color>
+    <color name="start_color_pressed">#983EAC</color>
+    <color name="middle_color_pressed">#376683</color>
+    <color name="end_color_pressed">#C5314F</color>
     <color name="gray_transperant">#5BC6C6CA</color>
     <color name="home_big_button_bg_color">#5BF5D398</color>
     <color name="big_button_card_bg">#5BF3EFDF</color>
+    <color name="button_clicked_start">#43144E</color>
+    <color name="button_clicked_end">#79061F</color>
 </resources>
