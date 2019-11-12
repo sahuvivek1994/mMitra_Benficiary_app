@@ -73,6 +73,7 @@
     <dimen name="bottom_sheet_icon_width">12sp</dimen>
     <dimen name="bottom_layout_marginBottom">4dp</dimen>
     <dimen name="bottom_layout_marginEnd">8dp</dimen>
+    <dimen name="bottom_layout_marginRight">8dp</dimen>
     <dimen name="bottom_layout_marginTop">4dp</dimen>
     <dimen name="bottom_sheet_text_min_size">8sp</dimen>
 

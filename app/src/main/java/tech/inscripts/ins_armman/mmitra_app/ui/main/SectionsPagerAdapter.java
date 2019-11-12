@@ -35,12 +35,12 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 //                return PlaceholderFragment.newInstance(position + 1);
 
             case 1:
-                profile profile_object = new profile();
-                return profile_object;
-
-            case 2:
                 add add_object = new add();
                 return add_object;
+            case 2:
+
+            profile profile_object = new profile();
+            return profile_object;
 
             default:
                 return null;

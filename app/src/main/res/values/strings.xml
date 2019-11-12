@@ -245,7 +245,7 @@
     </string-array>
 
     <string name="women_list">Women</string>
-    <string name="children_list">Children</string>
+    <string name="children_list">Test</string>
     <string name="high_risk_visit_list">High risk visits list</string>
     <string name="refer_here">Refer here</string>
     <string name="select_referred_location">Select referred location</string>
@@ -294,11 +294,11 @@
     <string name="overdue_visits">Overdue visits</string>
     <string name="total_referral">Total referral</string>
     <string name="not_referral">Not referred</string>
-    <string name="swipe_up_hint_text">swipe up for more info</string>
+    <string name="swipe_up_hint_text">User Details</string>
     <string name="update_forms_message">Update new form. click OK and go to setting and click on from update</string>
     <string name="referral_count">Referral Count</string>
     <string name="visits_count">Visits count</string>
-    <string name="register_count">Register count</string>
+    <string name="register_count">Register</string>
     <string name="img_edit_name">img_edit_name</string>
     <string name="graph">Graph</string>
     <string name="wages">Wages</string>
