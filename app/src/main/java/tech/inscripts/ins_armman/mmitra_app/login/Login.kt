@@ -45,7 +45,7 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
             setContentView(R.layout.activity_login)
             mLoginPresenter.attachView(this)
 
-        edittext_mobile.setOnEditorActionListener { textView, actionId, keyEvent ->
+        edit_mobile_number.setOnEditorActionListener { textView, actionId, keyEvent ->
             if (actionId == EditorInfo.IME_ACTION_DONE)
                 buttonLogin.performClick()
             false
@@ -53,11 +53,12 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
 
         buttonLogin.setOnClickListener {
             //var mobileNo = edittext_mobile.text.toString()
-            var mobileNo = "7738621083"
-            mLoginPresenter.validateCredentials(mobileNo)
+            /*var mobileNo = "7738621083"
+            mLoginPresenter.validateCredentials(mobileNo)*/
+            openHomeActivity()
         }
 
-        edittext_mobile.setOnClickListener(this)
+        edit_mobile_number.setOnClickListener(this)
 
     }
 
@@ -71,12 +72,12 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
 
 
     override fun setMobileError() {
-        textinputlayout_mobile.setErrorTextColor(ColorStateList.valueOf(Color.WHITE))
-        textinputlayout_mobile.error = getString(R.string.enter_username)
+        inputMobileNo.setErrorTextColor(ColorStateList.valueOf(Color.WHITE))
+        inputMobileNo.error = getString(R.string.enter_username)
     }
 
     override fun resetErrorMsg() {
-        textinputlayout_mobile?.error = null
+        inputMobileNo?.error = null
     }
 
     override fun showDialog(title: String, message: String) {
@@ -109,8 +110,8 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
     }
 
     override fun setAuthenticationFailedError() {
-        edittext_mobile.setText("")
-        textinputlayout_mobile.setError(getString(R.string.authentication_error_msg))
+        edit_mobile_number.setText("")
+        inputMobileNo.setError(getString(R.string.authentication_error_msg))
     }
 
     override fun getContext(): Context {

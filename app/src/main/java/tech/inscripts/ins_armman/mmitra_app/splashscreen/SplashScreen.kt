@@ -6,6 +6,7 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import tech.inscripts.ins_armman.mmitra_app.R
+import tech.inscripts.ins_armman.mmitra_app.login.ActivityLogin
 import tech.inscripts.ins_armman.mmitra_app.login.Login
 import java.util.*
 import kotlin.concurrent.schedule
@@ -25,7 +26,7 @@ class SplashScreen : AppCompatActivity(){
         imgLogo.startAnimation(anim)
         Timer().schedule(1000)
         {
-            startActivity(Intent(this@SplashScreen, Login::class.java))
+            startActivity(Intent(this@SplashScreen, ActivityLogin::class.java))
         }
     }
 }

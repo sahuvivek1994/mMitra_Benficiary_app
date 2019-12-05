@@ -27,7 +27,7 @@
             android:theme="@style/AppFullScreenTheme">
 
         </activity>
-        <activity android:name=".login.Login"
+        <activity android:name=".login.ActivityLogin"
             android:theme="@style/AppFullScreenTheme"/>
     </application>
 
