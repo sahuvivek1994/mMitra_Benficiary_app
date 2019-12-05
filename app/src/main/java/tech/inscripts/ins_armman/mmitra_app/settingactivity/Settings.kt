@@ -3,8 +3,9 @@ package tech.inscripts.ins_armman.mmitra_app.settingactivity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import tech.inscripts.ins_armman.mmitra_app.Main
 import tech.inscripts.ins_armman.mmitra_app.R
+import tech.inscripts.ins_armman.mmitra_app.home.MainActivity
+
 class Settings : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +23,6 @@ class Settings : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        startActivity(Intent(this, Main::class.java))
+        startActivity(Intent(this, MainActivity::class.java))
     }
 }

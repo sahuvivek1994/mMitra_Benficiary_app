@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="tech.inscripts.ins_armman.mmitra_app">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,16 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name=".Main"
-            android:label="@string/title_activity_main"
-            android:parentActivityName=".Splash_scren"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+       <activity android:name=".home.MainActivity"
+           android:theme="@style/AppTheme.NoActionBar">
+       <!--<intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>-->
+       </activity>
         <activity
             android:name=".splashscreen.SplashScreen"
             android:label="@string/app_name"
@@ -29,6 +33,13 @@
         </activity>
         <activity android:name=".login.Login"
             android:theme="@style/AppFullScreenTheme"/>
+        <activity android:name=".home.TestTimer">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

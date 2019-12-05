@@ -13,10 +13,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.progress_overlay.*
-import tech.inscripts.ins_armman.mmitra_app.Main
 import tech.inscripts.ins_armman.mmitra_app.R
 import tech.inscripts.ins_armman.mmitra_app.data.database.DBHelper
 import tech.inscripts.ins_armman.mmitra_app.data.database.DatabaseManager
+import tech.inscripts.ins_armman.mmitra_app.home.MainActivity
 import tech.inscripts.ins_armman.mmitra_app.utility.Utility
 
 
@@ -104,7 +104,7 @@ class Login : AppCompatActivity(), ILoginView , View.OnClickListener {
     }
 
     override fun openHomeActivity() {
-        val myIntent = Intent(this@Login, Main::class.java)
+        val myIntent = Intent(this@Login, MainActivity::class.java)
         startActivity(myIntent)
     }
 

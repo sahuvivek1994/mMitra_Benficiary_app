@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0C0C0C</color>
-    <color name="colorPrimaryDark">#050505</color>
+    <color name="colorPrimary">#4D0E3F</color>
+    <color name="colorPrimaryDark">#4D0E3F</color>
     <color name="colorAccent">#D81B60</color>
     <color name="white">#1B1B1B</color>
     <color name="black_overlay">#FC050505</color>
@@ -57,4 +57,7 @@
     <color name="valueColor">#424242</color>
     <color name="closedWomen">#EF5350</color>
     <color name="background">#E0DCDC</color>
+    <color name="colorBackground">#151B29</color>
+    <color name="colorYellow">#FF9800</color>
+
 </resources>
