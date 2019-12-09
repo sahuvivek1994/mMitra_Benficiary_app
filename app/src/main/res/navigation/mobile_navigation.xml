@@ -18,10 +18,19 @@
     <fragment
         android:id="@+id/nav_msg"
         android:name="tech.inscripts.ins_armman.mmitra_app.home.MessageFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_camera" >
+        android:label="@string/menu_chat"
+        tools:layout="@layout/fragment_messages" >
         <action
-            android:id="@+id/action_nav_msg_to_nav_settings"
+            android:id="@+id/action_nav_msg_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="tech.inscripts.ins_armman.mmitra_app.home.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_nav_settings"
             app:destination="@id/nav_settings" />
     </fragment>
     <fragment
@@ -37,4 +46,5 @@
             android:id="@+id/action_nav_settings_to_nav_home"
             app:destination="@id/nav_home" />
     </fragment>
+
 </navigation>

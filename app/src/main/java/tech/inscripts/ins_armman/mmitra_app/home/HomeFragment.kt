@@ -1,6 +1,7 @@
 package tech.inscripts.ins_armman.mmitra_app.home
 
 
+import android.graphics.Color
 import android.os.Bundle
 import android.os.CountDownTimer
 import androidx.fragment.app.Fragment
@@ -11,12 +12,14 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_home.*
 import android.util.Log
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.widget.Toolbar
 import tech.inscripts.ins_armman.mmitra_app.R
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
-
-
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class HomeFragment : Fragment() {

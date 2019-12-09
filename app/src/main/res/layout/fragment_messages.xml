@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.SettingsFragment">
+    tools:context=".home.MessageFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -11,24 +11,14 @@
         android:gravity="center"
         android:textSize="75sp"
         android:textColor="@android:color/black"
-        android:text="messages" />
-
-    <TextView
-        android:id="@+id/textView_num"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="75dp"
-        android:textSize="25sp"
-        android:textColor="@android:color/black"
-        tools:text="Number of photos: 5" />
+        android:text="Messages" />
 
     <Button
-        android:id="@+id/button_home"
+        android:id="@+id/button_photos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom |center_horizontal"
         android:layout_marginBottom="50dp"
-        android:text="Back to Home"/>
+        android:text="See all photos" />
 
 </FrameLayout>
