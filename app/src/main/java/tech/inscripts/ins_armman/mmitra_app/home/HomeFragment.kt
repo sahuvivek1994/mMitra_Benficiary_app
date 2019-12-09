@@ -9,12 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.Toast
-import tech.inscripts.ins_armman.mmitra_app.R
 import kotlinx.android.synthetic.main.fragment_home.*
 import android.util.Log
+import tech.inscripts.ins_armman.mmitra_app.R
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
+
+
 
 
 class HomeFragment : Fragment() {
@@ -32,6 +34,7 @@ class HomeFragment : Fragment() {
      *  1day = 24 hours * 60 mins(1hour = 60 mins) =1440 mins
      *       = 1440 mins * 60 secs (1 min = 60 secs) = 86400 secs*/
     val day1IntoMillis =86400 * 1000
+    val oneWeekInMillis = day1IntoMillis * 7
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -47,14 +50,14 @@ class HomeFragment : Fragment() {
 
 
     private fun setProgressBarValues(){
-        progressbar?.max = 120//day1IntoMillis * totalDays //280 days
-        progressbar?.progress = daysPassed!!.toInt() * day1IntoMillis
-        progressbar?.secondaryProgress = day1IntoMillis * totalDays
+        progressbar?.max = 280
+        progressbar?.progress = daysPassed!!.toInt()
+
     }
 
     private fun startCountDown(){
        // var countDownTimer =object : CountDownTimer(daysIntoMilliSecs!!,day1IntoMillis.toLong()) {
-        var countDownTimer =object : CountDownTimer(120000,1000) {
+        var countDownTimer =object : CountDownTimer(daysIntoMilliSecs!!.toLong(),oneWeekInMillis.toLong()) {
             override fun onFinish() {
                 Toast.makeText(activity,"countdown finished",Toast.LENGTH_SHORT).show()
             }
@@ -65,9 +68,15 @@ class HomeFragment : Fragment() {
                var secToMin = milliSecToSec/60
                 var minToHour = secToMin/60
                 var hourToDay = minToHour/24
-                textViewTime?.text =secToMin.toString() //"$hourToDay days"
-                progressbar?.progress = milliSecToSec.toInt()
-                txtEDD?.text=" expected delivery date: $eddDate"
+                var remainingWeeks = daysPassed!!.toInt()/7
+              var strForDay = getFormString(daysPassed!!.toInt())
+              var strForWeek = getFormString(remainingWeeks)
+                txtDaysRemain?.text ="$daysPassed$strForDay day"
+                txtEDD?.text="$eddDate is your  expected delivery date"
+                txtWeeksRemain?.text = "$remainingWeeks$strForWeek week"
+                progressbar?.progress =daysPassed!!.toInt()//hourToDay.toInt()
+
+
 
             }
 
@@ -96,6 +105,21 @@ class HomeFragment : Fragment() {
         calendar.add(Calendar.DAY_OF_MONTH, 280)
         eddDate = dateFormatter.format(calendar.time)
         Log.e("EDD ",eddDate)
+    }
+
+
+    private fun getFormString(dayNumber : Int):String{
+       if(dayNumber in 11..13){
+           return "th"
+       }
+
+        return when(dayNumber%10){
+            1 -> "st"
+            2 -> "nd"
+            3 -> "rd"
+            4 -> "th"
+            else -> "th"
+        }
     }
 
 

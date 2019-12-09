@@ -54,7 +54,7 @@ public class TestTimer extends AppCompatActivity implements View.OnClickListener
         private void initViews() {
             progressBarCircle = (ProgressBar) findViewById(R.id.progressBarCircle);
             editTextMinute = (EditText) findViewById(R.id.editTextMinute);
-            textViewTime = (TextView) findViewById(R.id.textViewTime);
+            textViewTime = (TextView) findViewById(R.id.txtDaysRemain);
             imageViewReset = (ImageView) findViewById(R.id.imageViewReset);
             imageViewStartStop = (ImageView) findViewById(R.id.imageViewStartStop);
         }

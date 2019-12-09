@@ -10,7 +10,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
-        android:layout_height="408dp"
+        android:layout_height="0dp"
         android:layout_margin="5dp"
         app:cardBackgroundColor="@color/background"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
@@ -23,8 +23,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/activity_main"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorBackground">
+            android:layout_height="match_parent">
 
             <ProgressBar
                 android:id="@+id/progressBarCircle"
@@ -32,19 +31,19 @@
                 android:layout_width="270dp"
                 android:layout_height="270dp"
                 android:layout_centerInParent="true"
-                android:layout_marginBottom="60dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/drawable_circle_dark_blue"
                 android:indeterminate="false"
                 android:max="280"
                 android:progressDrawable="@drawable/drawable_circle_yellow"
                 android:rotation="-90"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
             <TextView
-                android:id="@+id/textViewTime"
+                android:id="@+id/txtDaysRemain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/progressBarCircle"
@@ -53,13 +52,32 @@
                 android:layout_alignEnd="@+id/progressBarCircle"
                 android:layout_alignRight="@+id/progressBarCircle"
                 android:layout_alignBottom="@+id/progressBarCircle"
-                android:text="abc"
-                android:textColor="@color/colorYellow"
-                android:textSize="40sp"
+                android:text=" 280 day"
+                android:textAlignment="center"
+                android:textColor="@color/start_color_pressed"
+                android:textSize="34sp"
                 app:layout_constraintBottom_toBottomOf="@+id/progressBarCircle"
                 app:layout_constraintEnd_toEndOf="@+id/progressBarCircle"
                 app:layout_constraintStart_toStartOf="@+id/progressBarCircle"
                 app:layout_constraintTop_toTopOf="@+id/progressBarCircle" />
+
+            <TextView
+                android:id="@+id/txtWeeksRemain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/progressBarCircle"
+                android:layout_alignLeft="@+id/progressBarCircle"
+                android:layout_alignTop="@+id/progressBarCircle"
+                android:layout_alignEnd="@+id/progressBarCircle"
+                android:layout_alignRight="@+id/progressBarCircle"
+                android:layout_alignBottom="@+id/progressBarCircle"
+                android:layout_marginTop="24dp"
+                android:text=" 1st week"
+                android:textColor="@color/start_color_pressed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBarCircle" />
+
             <TextView
                 android:id="@+id/txtEDD"
                 android:layout_width="wrap_content"
@@ -70,10 +88,24 @@
                 android:layout_alignEnd="@+id/progressBarCircle"
                 android:layout_alignRight="@+id/progressBarCircle"
                 android:layout_alignBottom="@+id/progressBarCircle"
-                android:textColor="@color/colorYellow"
+                android:layout_marginTop="24dp"
+                android:text="20/04/2020 is your expected delivery date"
+                android:textColor="@color/start_color_pressed"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/progressBarCircle"  />
+                app:layout_constraintTop_toBottomOf="@+id/txtWeeksRemain" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Today is your"
+                android:textColor="@color/start_color_pressed"
+                android:textSize="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -83,6 +115,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.71" />
+        app:layout_constraintGuide_percent="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

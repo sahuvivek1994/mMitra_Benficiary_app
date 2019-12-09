@@ -22,7 +22,7 @@
         android:id="@+id/editTextMinute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textViewTime"
+        android:layout_above="@+id/txtDaysRemain"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:gravity="center"
@@ -36,7 +36,7 @@
         android:textColorHint="@color/colorYellow" />
 
     <TextView
-        android:id="@+id/textViewTime"
+        android:id="@+id/txtDaysRemain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -48,7 +48,7 @@
         android:id="@+id/imageViewReset"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_below="@+id/textViewTime"
+        android:layout_below="@+id/txtDaysRemain"
         android:layout_centerInParent="true"
         android:layout_marginTop="30dp"
         android:src="@drawable/icon_reset"
