@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressBarCircle"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="270dp"
+                android:layout_height="270dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/drawable_circle_dark_blue"
+                android:indeterminate="false"
+                android:max="280"
+                android:progressDrawable="@drawable/drawable_circle_yellow"
+                android:rotation="-90"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/txtDaysRemain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/progressBarCircle"
+                android:layout_alignLeft="@+id/progressBarCircle"
+                android:layout_alignTop="@+id/progressBarCircle"
+                android:layout_alignEnd="@+id/progressBarCircle"
+                android:layout_alignRight="@+id/progressBarCircle"
+                android:layout_alignBottom="@+id/progressBarCircle"
+                android:text=" 280 day"
+                android:textAlignment="center"
+                android:textColor="@color/start_color_pressed"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarCircle"
+                app:layout_constraintEnd_toEndOf="@+id/progressBarCircle"
+                app:layout_constraintStart_toStartOf="@+id/progressBarCircle"
+                app:layout_constraintTop_toTopOf="@+id/progressBarCircle" />
+
+            <TextView
+                android:id="@+id/txtWeeksRemain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/progressBarCircle"
+                android:layout_alignLeft="@+id/progressBarCircle"
+                android:layout_alignTop="@+id/progressBarCircle"
+                android:layout_alignEnd="@+id/progressBarCircle"
+                android:layout_alignRight="@+id/progressBarCircle"
+                android:layout_alignBottom="@+id/progressBarCircle"
+                android:layout_marginTop="24dp"
+                android:text=" 1st week"
+                android:textColor="@color/start_color_pressed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBarCircle" />
+
+            <TextView
+                android:id="@+id/txtEDD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/progressBarCircle"
+                android:layout_alignLeft="@+id/progressBarCircle"
+                android:layout_alignTop="@+id/progressBarCircle"
+                android:layout_alignEnd="@+id/progressBarCircle"
+                android:layout_alignRight="@+id/progressBarCircle"
+                android:layout_alignBottom="@+id/progressBarCircle"
+                android:layout_marginTop="24dp"
+                android:text="20/04/2020 is your expected delivery date"
+                android:textColor="@color/start_color_pressed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtWeeksRemain" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Today is your"
+                android:textColor="@color/start_color_pressed"
+                android:textSize="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

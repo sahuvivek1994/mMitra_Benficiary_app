@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6B2044</color>
-    <color name="colorPrimaryDark">#942E5E</color>
+    <color name="colorPrimary">#619196</color>
+<!--    #BC85A3-->
+    <color name="colorPrimaryDark">#334B50</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
     <color name="black_overlay">#FC050505</color>
     <color name="start_color">#2DA3A3</color>
     <color name="middle_color">#173363</color>
@@ -32,17 +34,18 @@
     <color name="black_color">#000000</color>
     <color name="grey">#888</color>
     <color name="graylight">#fafafa</color>
+
     <color name="color_incomplete">#FF9800</color>
-    <color name="start_pink">#CC4644</color>
+    <color name="start_pink">#5F3651</color>
     <color name="end_pink">#221715</color>
     <color name="button_bg_transperant">#E4B1B9C0</color>
     <color name="button_bg_transperant1">#E4E9EEEE</color>
     <color name="opt_bg_start">#E4F17272</color>
     <color name="opt_bg_middle">#E4D5BBBB</color>
     <color name="opt_bg_end">#FFFF</color>
-    <color name="start_color_pressed">#983EAC</color>
+    <color name="start_color_pressed">#BC85A3</color>
     <color name="middle_color_pressed">#376683</color>
-    <color name="end_color_pressed">#C5314F</color>
+    <color name="end_color_pressed">#9799Ba</color>
     <color name="gray_transperant">#5BC6C6CA</color>
     <color name="home_big_button_bg_color">#5BF5D398</color>
     <color name="big_button_card_bg">#5BF3EFDF</color>
@@ -56,4 +59,8 @@
     <color name="valueColor">#424242</color>
     <color name="closedWomen">#EF5350</color>
     <color name="background">#E0DCDC</color>
+    <color name="colorBackground">#E6E0EB</color>
+    <color name="colorYellow">#FF9800</color>
+    <color name="dark_selected">#F4DCD6</color>
+<!--#F4DCD6-->
 </resources>

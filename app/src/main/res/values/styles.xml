@@ -8,7 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#3F51B5</item>
+        <item name="android:textColorPrimary">#616161</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -45,9 +51,10 @@
         <item name="android:scaleType">fitCenter</item>
     </style>
     <style name="NavDrawerTextStyle" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">14dp</item>
     </style>
     <style name="Preference_TextAppearanceMaterialSubhead"></style>
+
     <style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
@@ -74,7 +81,9 @@
     </style>
     <style name="bottomSheetStyle">
         <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
         <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginRight">24dp</item>
         <item name="android:clipToPadding">true</item>
         <item name="android:animateLayoutChanges">true</item>
     </style>

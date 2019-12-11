@@ -3,41 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="tech.inscripts.ins_armman.mmitra_app.ui.home.HomeFragment"
+        android:name="tech.inscripts.ins_armman.mmitra_app.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/nav_msg" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="tech.inscripts.ins_armman.mmitra_app.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_msg"
+        android:name="tech.inscripts.ins_armman.mmitra_app.home.MessageFragment"
+        android:label="@string/menu_chat"
+        tools:layout="@layout/fragment_messages" >
+        <action
+            android:id="@+id/action_nav_msg_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="tech.inscripts.ins_armman.mmitra_app.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_slideshow" />
-
+        android:id="@+id/profileFragment"
+        android:name="tech.inscripts.ins_armman.mmitra_app.home.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_nav_settings"
+            app:destination="@id/nav_settings" />
+    </fragment>
     <fragment
-        android:id="@+id/nav_tools"
-        android:name="tech.inscripts.ins_armman.mmitra_app.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:id="@+id/nav_settings"
+        android:name="tech.inscripts.ins_armman.mmitra_app.home.SettingsFragment"
+        android:label="@string/setting"
+        tools:layout="@layout/fragment_settings">
+        <argument
+            android:name="numOfPhotos"
+            android:defaultValue="0"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_nav_settings_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 
-    <fragment
-        android:id="@+id/nav_share"
-        android:name="tech.inscripts.ins_armman.mmitra_app.ui.share.ShareFragment"
-        android:label="@string/menu_share"
-        tools:layout="@layout/fragment_share" />
-
-    <fragment
-        android:id="@+id/nav_send"
-        android:name="tech.inscripts.ins_armman.mmitra_app.ui.send.SendFragment"
-        android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
 </navigation>
