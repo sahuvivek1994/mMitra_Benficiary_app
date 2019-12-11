@@ -19,15 +19,15 @@
         android:id="@+id/nav_msg"
         android:name="tech.inscripts.ins_armman.mmitra_app.home.MessageFragment"
         android:label="@string/menu_chat"
-        tools:layout="@layout/fragment_messages" >
+        tools:layout="@layout/fragment_chatlist" >
         <action
             android:id="@+id/action_nav_msg_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            app:destination="@id/nav_profile" />
     </fragment>
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/nav_profile"
         android:name="tech.inscripts.ins_armman.mmitra_app.home.ProfileFragment"
-        android:label="ProfileFragment"
+        android:label="@string/menu_my_profile"
         tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_to_nav_settings"

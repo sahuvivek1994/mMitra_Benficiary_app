@@ -4,8 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
-import tech.inscripts.ins_armman.mmitra_app.Main
 import tech.inscripts.ins_armman.mmitra_app.R
+import tech.inscripts.ins_armman.mmitra_app.home.MainActivity
 
 class ActivityLogin  :AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +13,7 @@ class ActivityLogin  :AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         buttonLogin.setOnClickListener {
-            val myIntent = Intent(this@ActivityLogin, Main::class.java)
+            val myIntent = Intent(this@ActivityLogin, MainActivity::class.java)
             startActivity(myIntent)
         }
 
