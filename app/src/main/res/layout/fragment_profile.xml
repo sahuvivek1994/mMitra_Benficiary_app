@@ -12,7 +12,7 @@
     app:behavior_hideable="false"
     app:behavior_peekHeight="64dp"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    tools:context=".Main"
+    tools:context=".home.ProfileFragment"
     tools:shownIn="@layout/activity_main">
 
 

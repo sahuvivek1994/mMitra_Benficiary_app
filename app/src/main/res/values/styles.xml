@@ -51,7 +51,7 @@
         <item name="android:scaleType">fitCenter</item>
     </style>
     <style name="NavDrawerTextStyle" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">14dp</item>
     </style>
     <style name="Preference_TextAppearanceMaterialSubhead"></style>
 
