@@ -20,11 +20,12 @@ import tech.inscripts.ins_armman.mmitra_app.profile.ProfileActivity
 
 class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener{
 
+    lateinit var  toolbar : Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
-        val toolbar : Toolbar? = findViewById(R.id.fragmentToolbar)
+        toolbar= findViewById(R.id.ActivityToolbar)
         setupBottomNavMenu(navController)
         toolbar?.setTitleTextColor(Color.WHITE)
         toolbar?.setNavigationIcon(R.drawable.ic_navigation_icon)
