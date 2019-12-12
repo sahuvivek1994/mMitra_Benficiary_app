@@ -63,6 +63,7 @@ class ChatAdapter() : RecyclerView.Adapter<ChatAdapter.ChatHolder>() {
 
             if (clickListener != null) {
                 clickListener?.itemClicked(v, position)
+                strName = arrayOfNames[position]
                 intent.putExtra("name", strName)
             }
             context?.startActivity(intent)

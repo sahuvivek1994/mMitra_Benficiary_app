@@ -54,7 +54,7 @@
 
     <color name="color1">#D5E90E0E</color>
     <color name="color2">#D5CC4141</color>
-    <color name="color3">#9EBC85A3</color>
+    <color name="color3">#9EC2B6BC</color>
     <color name="labelColor">@android:color/black</color>
     <color name="valueColor">#424242</color>
     <color name="closedWomen">#EF5350</color>

@@ -11,10 +11,8 @@ class ChatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_messages)
         var name = intent.getStringExtra("name")
-        var toolbar : Toolbar = findViewById(R.id.ActivityToolbar)
+        var toolbar  = findViewById<androidx.appcompat.widget.Toolbar>(R.id.ActivityToolbar)
         toolbar.title = name
         setSupportActionBar(toolbar)
-
-
     }
 }
