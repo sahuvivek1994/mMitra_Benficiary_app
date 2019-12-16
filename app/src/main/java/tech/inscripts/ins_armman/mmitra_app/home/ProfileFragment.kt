@@ -2,6 +2,8 @@ package tech.inscripts.ins_armman.mmitra_app.home
 
 
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +19,7 @@ class ProfileFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
 var view : View = inflater.inflate(R.layout.fragment_profile, container, false)
     activity?.title = "Profile"
+        activity?.actionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.start_pink)))
         return view
     }
 

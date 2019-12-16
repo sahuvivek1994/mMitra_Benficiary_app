@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#619196</color>
+    <color name="colorPrimary">#82B2B8</color>
 <!--    #BC85A3-->
-    <color name="colorPrimaryDark">#334B50</color>
+    <color name="colorPrimaryDark">#435458</color>
     <color name="colorAccent">#D81B60</color>
     <color name="white">#FFFFFF</color>
     <color name="black_overlay">#FC050505</color>
@@ -36,7 +36,7 @@
     <color name="graylight">#fafafa</color>
 
     <color name="color_incomplete">#FF9800</color>
-    <color name="start_pink">#5F3651</color>
+    <color name="start_pink">#F4A5A1</color>
     <color name="end_pink">#221715</color>
     <color name="button_bg_transperant">#E4B1B9C0</color>
     <color name="button_bg_transperant1">#E4E9EEEE</color>
@@ -58,7 +58,7 @@
     <color name="labelColor">@android:color/black</color>
     <color name="valueColor">#424242</color>
     <color name="closedWomen">#EF5350</color>
-    <color name="background">#E0DCDC</color>
+    <color name="background">#F7F4F4</color>
     <color name="colorBackground">#E6E0EB</color>
     <color name="colorYellow">#FF9800</color>
     <color name="dark_selected">#F4DCD6</color>
@@ -66,4 +66,5 @@
     <color name="sender">#a3a39f</color>
     <color name="reciever">#0ec692</color>
     <color name="Type_Message">#333635</color>
+    <color name="profile_icon">#C789AC</color>
 </resources>

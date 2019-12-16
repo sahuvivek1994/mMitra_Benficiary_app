@@ -3,7 +3,7 @@
     android:padding="10dp"
     android:shape="rectangle"
     android:useLevel="false">
-    <gradient android:startColor="@color/end_color_pressed"
+    <gradient android:startColor="@color/colorPrimary"
         android:endColor="@color/start_color_pressed"
         android:angle="270"/>
     <size android:width="700dp"
