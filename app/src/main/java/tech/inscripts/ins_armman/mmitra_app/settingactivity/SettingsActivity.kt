@@ -16,11 +16,10 @@ class SettingsActivity : AppCompatActivity() {
             supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         }*/
 
-        fragmentManager.beginTransaction().replace(R.id.frame_settings_menu, MainPreferenceFragment()).commit()
+       // fragmentManager.beginTransaction().replace(R.id.frame_settings_menu, MainPreferenceFragment()).commit()
     }
     override fun onBackPressed() {
         super.onBackPressed()
-        NavUtils.navigateUpFromSameTask(this)
     }
 
 }

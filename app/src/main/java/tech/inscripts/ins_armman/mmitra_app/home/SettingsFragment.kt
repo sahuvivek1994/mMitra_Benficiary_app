@@ -20,22 +20,32 @@ class SettingsFragment : Fragment() {
     var viewPager : ViewPager?=null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        var view = inflater.inflate(R.layout.fragment_settings, container, false)
+        var view = inflater.inflate(R.layout.fragment_settings, container,  false)
         activity?.title = ""
         tabLayout = view.findViewById(R.id.tabLayout)
         viewPager = view.findViewById(R.id.viewPager)
         tabLayout?.addTab(tabLayout?.newTab()!!.setText("Personal"))
         tabLayout?.addTab(tabLayout?.newTab()!!.setText("Medical"))
-        tabLayout?.addTab(tabLayout?.newTab()!!.setText(""))
-        tabLayout?.addTab(tabLayout?.newTab()!!.setText(""))
         tabLayout?.tabGravity = TabLayout.GRAVITY_FILL
         tabLayout?.setSelectedTabIndicatorColor(resources.getColor(R.color.start_pink))
-        tabLayout?.setTabTextColors(resources.getColor(R.color.colorPrimary),resources.getColor(R.color.start_pink))
+      //  tabLayout?.setTabTextColors(resources.getColor(R.color.colorPrimary),resources.getColor(R.color.start_pink))
         var adapter = SettingsAdapter(fragmentManager)
         viewPager?.adapter = adapter
         viewPager?.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
-        tabLayout?.setupWithViewPager( this.viewPager)
+        tabLayout?.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabReselected(tab: TabLayout.Tab) {
+            viewPager?.currentItem = tab.position
+            }
 
+            override fun onTabUnselected(tab: TabLayout.Tab) {
+            }
+
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                viewPager?.currentItem = tab.position
+
+            }
+
+        })
          return view
     }
 

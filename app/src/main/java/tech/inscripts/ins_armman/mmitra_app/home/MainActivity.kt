@@ -17,6 +17,7 @@ import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import tech.inscripts.ins_armman.mmitra_app.R
 import tech.inscripts.ins_armman.mmitra_app.profile.ProfileActivity
+import tech.inscripts.ins_armman.mmitra_app.settingactivity.SettingsActivity
 
 class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener{
 
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         val toggle = ActionBarDrawerToggle(this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
-
+        nav_view.setNavigationItemSelectedListener(this)
     }
 
     private fun setupBottomNavMenu(navController: NavController) {
@@ -63,7 +64,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
                 startActivity(Intent(this, MessageFragment::class.java))
             }
             R.id.nav_settings -> {
-                startActivity(Intent(this, SettingsFragment::class.java))
+                startActivity(Intent(this, SettingsActivity::class.java))
 
             }
             R.id.nav_share_us ->{}

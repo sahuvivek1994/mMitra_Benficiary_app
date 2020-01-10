@@ -48,6 +48,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".profile.ProfileActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".settingactivity.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
